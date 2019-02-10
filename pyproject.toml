@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "rtpy"
+version = "1.4.8"
+description = "Python wrapper for the JFrog Artifactory REST API."
+authors = ["Guillaume Renault <me@grenault.org>"]
+license = "Apache-2.0"
+readme = 'README.md'
+homepage = "https://github.com/Orange-OpenSource/rtpy"
+keywords = ['artifactory', 'rest', 'api', 'wrapper']
+
+[tool.poetry.dependencies]
+python = "~2.7 || ^3.4"
+requests = "^2.18.4"
+
+[tool.poetry.dev-dependencies]
+poetry-setup = "^0.3"
+pytest = "^3.6"
+coverage = "^4.5"
+tox = "^3.2"
+tox-pyenv = "^1.1"
+setuptools = "^40.0"
+Sphinx="^1.8.2"
+sphinxcontrib-napoleon = "^0.7"
+sphinx_rtd_theme = "^0.4"

@@ -1,0 +1,28 @@
+{
+ "systemLogsConfiguration" : {
+    "enabled" : true
+  },
+ "systemInfoConfiguration" : {
+    "enabled" : true
+  },
+ "securityInfoConfiguration" : {
+    "enabled" : true,
+    "hideUserDetails" : true
+  },
+ "configDescriptorConfiguration" : {
+    "enabled" : true,
+    "hideUserDetails" : true
+  },
+ "configFilesConfiguration" : {
+    "enabled" : true,
+    "hideUserDetails" : true
+  },
+ "storageSummaryConfiguration" : {
+    "enabled" : true
+  },
+ "threadDumpConfiguration" : {
+    "enabled" : true,
+    "count" : 1,
+    "interval" : 0
+  }
+}
