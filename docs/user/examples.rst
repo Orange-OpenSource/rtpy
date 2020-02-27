@@ -946,7 +946,7 @@ Create or Replace Permission Target
 .. code-block:: python
 
  params = {}
- params["permission_target_name"] = "my_permission"
+ params["name"] = "my_permission"
  params["repositories"] = ["myrepo1", "myrepo2"]
  r = af.security.create_or_replace_permission_target(params)
  # https://www.jfrog.com/confluence/display/RTF4X/Security+Configuration+JSON
