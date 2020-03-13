@@ -1,9 +1,5 @@
 # coding: utf-8
 
-# Author: Guillaume Renault
-# Author email: grenault.ext@orange.com
-# coding: utf-8
-
 # Copyright (C) 2018 Orange
 #
 # This software is distributed under the terms and conditions of the 'Apache-2.0'

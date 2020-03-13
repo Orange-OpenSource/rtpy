@@ -217,7 +217,7 @@ SUPPORT
 -------
 
 
-* [x] Create Bundle
-* [x] List Bundles
-* [x] Get Bundle
-* [x] Delete Bundle
+* [ ] Create Bundle
+* [ ] List Bundles
+* [ ] Get Bundle
+* [ ] Delete Bundle

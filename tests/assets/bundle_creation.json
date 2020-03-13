@@ -1,28 +1,15 @@
 {
- "systemLogsConfiguration" : {
-    "enabled" : true
-  },
- "systemInfoConfiguration" : {
-    "enabled" : true
-  },
- "securityInfoConfiguration" : {
-    "enabled" : true,
-    "hideUserDetails" : true
-  },
- "configDescriptorConfiguration" : {
-    "enabled" : true,
-    "hideUserDetails" : true
-  },
- "configFilesConfiguration" : {
-    "enabled" : true,
-    "hideUserDetails" : true
-  },
- "storageSummaryConfiguration" : {
-    "enabled" : true
-  },
- "threadDumpConfiguration" : {
-    "enabled" : true,
-    "count" : 1,
-    "interval" : 0
-  }
+   "name":"test_bundle",
+   "description":"test_bundle",
+   "parameters":{
+      "configuration": "false",
+      "system": "false",
+      "logs":{
+         "include": "false"
+      },
+      "thread_dump":{
+         "count": 1,
+         "interval": 0
+      }
+   }
 }

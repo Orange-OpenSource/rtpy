@@ -976,56 +976,6 @@ Effective Item Permissions
  # To get information on the root repo, use "", as argument for item_path
 
 
-SUPPORT
--------
-
-Create Bundle
-^^^^^^^^^^^^^
-
-`https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-CreateBundle <https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-CreateBundle>`_
-
-.. code-block:: python
-
- # params is a python dictionnary which should be like :
- # https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-CreateBundle
- params = rtpy.json_to_dict("tests/templates/bundle_creation.json")
- r = af.support.create_bundle(params)
-
-
-List Bundles
-^^^^^^^^^^^^
-
-`https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-ListBundles <https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-ListBundles>`_
-
-.. code-block:: python
-
- r = af.support.list_bundles()
-
-
-Get Bundle
-^^^^^^^^^^
-
-`https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-GetBundle <https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-GetBundle>`_
-
-.. code-block:: python
-
- # bundle_name is the name of the bundle
- r = af.support.get_bundle(bundle_name)
- with open(my_bundle_name, "wb") as bundle_file:
-     bundle_file.write(r.content)
-
-
-Delete Bundle
-^^^^^^^^^^^^^
-
-`https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-DeleteBundle <https://www.jfrog.com/confluence/display/RTF/Artifactory+REST+API#ArtifactoryRESTAPI-DeleteBundle>`_
-
-.. code-block:: python
-
- # bundle_name is the name of the bundle
- r = af.support.delete_bundle(bundle_name)
-
-
 SYSTEM AND CONFIGURATION
 ------------------------
 

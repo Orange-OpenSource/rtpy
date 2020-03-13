@@ -11,6 +11,7 @@
 from __future__ import unicode_literals
 import json
 import sys
+from copy import deepcopy
 
 import requests
 from requests.exceptions import HTTPError
@@ -119,14 +120,6 @@ class RtpyBase(object):
         """
         Configure or update user settings.
 
-        A _modified_user_settings dict attribute is used to store
-        the last modified settings
-
-        For each setting:
-            If the value is different from default then update the _user_settings dict
-            If the value is different from default then add the setting to
-            the _modified_user_settings attribute
-
         Returns
         -------
         None
@@ -134,11 +127,13 @@ class RtpyBase(object):
 
         """
         self._check_provided_keys_in_settings(provided_settings)
-        self._modified_user_settings = {}
+        self._original_user_settings = deepcopy(self._user_settings)
         for setting in provided_settings:
-            if setting != self._user_settings[setting]:
-                self._user_settings[setting] = provided_settings[setting]
-                self._modified_user_settings[setting] = self._user_settings[setting]
+            self._user_settings[setting] = provided_settings[setting]
+
+    def _restore_user_settings(self):
+        """Restore original user settings."""
+        self._user_settings = self._original_user_settings
 
     def _validate_user_settings(self):
         """
@@ -305,9 +300,7 @@ class RtpyBase(object):
             sys.stdout.write(message)
 
         if settings:
-
-            self._configure_user_settings(self._modified_user_settings)
-            self._validate_user_settings()
+            self._restore_user_settings()
 
         return self._convert_response(
             api_method, request_url, verb, response, raw_response, byte_output
