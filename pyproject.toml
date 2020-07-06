@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "rtpy"
-version = "1.4.8"
+version = "1.4.9"
 description = "Python wrapper for the JFrog Artifactory REST API."
 authors = ["Guillaume Renault <me@grenault.org>"]
 license = "Apache-2.0"
