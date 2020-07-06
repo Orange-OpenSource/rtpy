@@ -1,9 +1,5 @@
 # coding: utf-8
 
-# Author: Guillaume Renault
-# Author email: grenault.ext@orange.com
-# coding: utf-8
-
 # Copyright (C) 2018 Orange
 #
 # This software is distributed under the terms and conditions of the 'Apache-2.0'
@@ -20,7 +16,6 @@ from .builds import RtpyBuilds
 from .repositories import RtpyRepositories
 from .searches import RtpySearches
 from .security import RtpySecurity
-from .support import RtpySupport
 from .system_and_configuration import RtpySystemAndConfiguration
 
 
@@ -69,7 +64,6 @@ class Rtpy(RtpyBase):
         )
         self.searches = RtpySearches(settings, "search/", "[SEARCHES] : ")
         self.security = RtpySecurity(settings, "security/", "[SECURITY] : ")
-        self.support = RtpySupport(settings, "support/", "[SUPPORT] : ")
         self.system_and_configuration = RtpySystemAndConfiguration(
             settings, "system/", "[SYSTEM & CONFIGURATION] : "
         )
